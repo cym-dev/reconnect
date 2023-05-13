@@ -19,6 +19,9 @@
             <li>
               <a href="#about">About</a>
             </li>
+            <li>
+              <a href="#form">Form</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -76,7 +79,7 @@
         </div>
       </section>
       <section id="about">
-        <div class="h-50 content-bottom">
+        <div class="content-bottom">
           <div class="about-content">
             <div>
               <h3>Mission</h3>
@@ -96,6 +99,64 @@
             </div>
           </div>
         </div>
+      </section>
+      <section id="form">
+        <form action="">
+          <table>
+            <tr>
+              <td colspan="2"><h1>Inquiry Form</h1></td>
+            </tr>
+            <tr>
+              <td>Fullname</td>
+              <td>
+                <input
+                  placeholder="First name, Last name, MI"
+                  style="width: 200px"
+                  type="text"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>
+                <input placeholder="sample@gmail.com" type="email" />
+              </td>
+            </tr>
+            <tr>
+              <td>Number</td>
+              <td>
+                <input
+                  placeholder="09XXXXXXXXX"
+                  pattern="09[1-9]{9}"
+                  type="tel"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Budget</td>
+              <td>
+                <input placeholder="For this project budget" type="text" />
+              </td>
+            </tr>
+            <tr>
+              <td>Service</td>
+              <td>
+                <select name="service" id="service">
+                  <option value="capstone">Capstone</option>
+                  <option value="case">Case Study</option>
+                  <option value="assigment">Assignment</option>
+                  <option value="activity">Activity</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button type="reset">Reset</button>
+                <button>Submit</button>
+              </td>
+            </tr>
+          </table>
+        </form>
       </section>
 
       <footer>
