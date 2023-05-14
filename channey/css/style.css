@@ -46,6 +46,14 @@ nav > #nav-content > ul > li > a:hover {
   border-radius: 30px;
   background-color: var(--bg);
 }
+
+#home {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
 #offer {
   color: #03045e;
   display: grid;
@@ -164,11 +172,12 @@ input {
   height: 30px;
   border-radius: 10px;
   border: none;
-  width: 200px;
+  width: 250px;
 }
 
 table,
 input::placeholder {
+  padding: 20px;
   font-size: 1.2rem;
 }
 table tr td {
@@ -214,6 +223,12 @@ footer {
   }
 }
 @media only screen and (max-width: 540px) {
+  #home {
+    height: auto;
+  }
+  #home h1 span {
+    font-size: 40px;
+  }
   #offer .content-top {
     display: flex;
     flex-direction: column;
