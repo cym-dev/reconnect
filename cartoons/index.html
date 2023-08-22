@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="
+https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css"
+    />
+  </head>
+  <body class="bg-color">
+    <div class="blog-slider">
+      <div class="blog-slider__wrp swiper-wrapper">
+        <div class="blog-slider__item swiper-slide">
+          <div class="blog-slider__img">
+            <img class="bg-color" src="./images/sponge.png" alt="" />
+          </div>
+          <div class="blog-slider__content">
+            <span class="blog-slider__code">26 December 2019</span>
+            <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+            <div class="blog-slider__text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae voluptate repellendus magni illo ea animi?
+            </div>
+            <a href="#" class="blog-slider__button bg-color">READ MORE</a>
+          </div>
+        </div>
+        <div class="blog-slider__item swiper-slide">
+          <div class="blog-slider__img">
+            <img class="bg-color" src="./images/patrick.png" alt="" />
+          </div>
+          <div class="blog-slider__content">
+            <span class="blog-slider__code">26 December 2019</span>
+            <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
+            <div class="blog-slider__text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae voluptate repellendus magni illo ea animi?
+            </div>
+            <a href="#" class="blog-slider__button bg-color">READ MORE</a>
+          </div>
+        </div>
+
+        <div class="blog-slider__item swiper-slide">
+          <div class="blog-slider__img">
+            <img class="bg-color" src="./images/squid.png" alt="" />
+          </div>
+          <div class="blog-slider__content">
+            <span class="blog-slider__code">26 December 2019</span>
+            <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+            <div class="blog-slider__text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae voluptate repellendus magni illo ea animi?
+            </div>
+            <a href="#" class="blog-slider__button bg-color">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-slider__pagination"></div>
+    </div>
+    <script src="
+https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="
+https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    <script>
+      const gradientBoxes = document.querySelectorAll(".bg-color");
+      const gradientValue = `linear-gradient( 147deg,
+      #89d5cc 0%,
+      #f7abad 25%,
+      #f4fb34 75%)`;
+      gradientBoxes.forEach(box => {
+        box.style.background = gradientValue;
+      });
+
+      const swiper = new Swiper(".blog-slider", {
+        onClick: function (sw, e) {
+          e.preventDefault();
+          sw.allowClick = false;
+        },
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        mousewheel: {
+          invert: false,
+        },
+        autoHeight: true,
+        pagination: {
+          el: ".blog-slider__pagination",
+          clickable: true,
+        },
+      });
+
+      // Get all slide elements
+      var slideElements = document.querySelectorAll(
+        ".swiper-pagination-bullet"
+      );
+      swiper.on("slideChange", async function () {
+        var activeSlideIndex = await swiper.activeIndex;
+      });
+    </script>
+  </body>
+</html>
