@@ -19,13 +19,20 @@ https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css"
             <img class="bg-color" src="./images/sponge.png" alt="" />
           </div>
           <div class="blog-slider__content">
-            <span class="blog-slider__code">26 December 2019</span>
-            <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+            <div class="blog-slider__title">SpongeBob SquarePants</div>
             <div class="blog-slider__text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Recusandae voluptate repellendus magni illo ea animi?
+              Dive into the colorful world of SpongeBob SquarePants! Explore
+              Bikini Bottom, meet iconic characters, and relive memorable
+              moments through playful animations and interactive elements.
+              Immerse yourself in nostalgia and share your love for the show
+              with fellow fans
             </div>
-            <a href="#" class="blog-slider__button bg-color">READ MORE</a>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/SpongeBob_SquarePants"
+              class="blog-slider__button bg-color"
+              >READ MORE</a
+            >
           </div>
         </div>
         <div class="blog-slider__item swiper-slide">
@@ -33,13 +40,19 @@ https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css"
             <img class="bg-color" src="./images/patrick.png" alt="" />
           </div>
           <div class="blog-slider__content">
-            <span class="blog-slider__code">26 December 2019</span>
-            <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
+            <div class="blog-slider__title">Patrick Star</div>
             <div class="blog-slider__text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Recusandae voluptate repellendus magni illo ea animi?
+              Dive into the whimsical world of Patrick Star! Meet SpongeBob's
+              lovable best friend, known for his hilarious antics and infectious
+              laughter. Explore his quirky quotes, watch him in action through
+              animations, and discover the joy of Patrick's carefree spirit.
             </div>
-            <a href="#" class="blog-slider__button bg-color">READ MORE</a>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Patrick_Star"
+              class="blog-slider__button bg-color"
+              >READ MORE</a
+            >
           </div>
         </div>
 
@@ -48,13 +61,20 @@ https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css"
             <img class="bg-color" src="./images/squid.png" alt="" />
           </div>
           <div class="blog-slider__content">
-            <span class="blog-slider__code">26 December 2019</span>
-            <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+            <div class="blog-slider__title">Squidward Tentacles</div>
             <div class="blog-slider__text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Recusandae voluptate repellendus magni illo ea animi?
+              Discover the world of Squidward Tentacles online! Delve into the
+              life of the grumpy yet oddly endearing octopus from SpongeBob
+              SquarePants. Explore his passion for music, his artistic pursuits,
+              and his often humorous interactions with Bikini Bottom's
+              residents.
             </div>
-            <a href="#" class="blog-slider__button bg-color">READ MORE</a>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Squidward_Tentacles"
+              class="blog-slider__button bg-color"
+              >READ MORE</a
+            >
           </div>
         </div>
       </div>
@@ -65,15 +85,6 @@ https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="
 https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <script>
-      const gradientBoxes = document.querySelectorAll(".bg-color");
-      const gradientValue = `linear-gradient( 147deg,
-      #89d5cc 0%,
-      #f7abad 25%,
-      #f4fb34 75%)`;
-      gradientBoxes.forEach(box => {
-        box.style.background = gradientValue;
-      });
-
       const swiper = new Swiper(".blog-slider", {
         onClick: function (sw, e) {
           e.preventDefault();
@@ -96,8 +107,40 @@ https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
       var slideElements = document.querySelectorAll(
         ".swiper-pagination-bullet"
       );
+      const gradientBoxes = document.querySelectorAll(".bg-color");
+      var gradientValue = `linear-gradient( 147deg,
+      #89d5cc 0%,
+      #f7abad 25%,
+      #f4fb34 75%)`;
+      gradientBoxes.forEach(box => {
+        box.style.background = gradientValue;
+      });
       swiper.on("slideChange", async function () {
         var activeSlideIndex = await swiper.activeIndex;
+        switch (activeSlideIndex) {
+          case 1:
+            gradientValue = `linear-gradient( 147deg,
+      #89d5cc 0%,
+      #f7abad 25%,
+      #f4fb34 75%)`;
+            break;
+          case 2:
+            gradientValue = await `linear-gradient( 147deg,
+      #89d5cc 0%,
+      #f4fb34 25%,
+      #f7abad 75%)`;
+            break;
+
+          default:
+            gradientValue = await `linear-gradient( 147deg,
+      #f4fb34 0%,
+      #f7abad 25%,
+      #89d5cc 75%)`;
+            break;
+        }
+        await gradientBoxes.forEach(box => {
+          box.style.background = gradientValue;
+        });
       });
     </script>
   </body>
