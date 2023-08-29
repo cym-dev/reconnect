@@ -116,16 +116,15 @@ https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
       });
       swiper.on("slideChange", async function () {
         var activeSlideIndex = await swiper.activeIndex;
-        alert(activeSlideIndex)
+       
         switch (activeSlideIndex) {
-          case 1:
-          case 4:
+          case 0:
             gradientValue = `linear-gradient( 147deg,
       #89d5cc 0%,
       #f7abad 25%,
       #f4fb34 75%)`;
             break;
-          case 2:
+          case 1:
             gradientValue = await `linear-gradient( 147deg,
       #f4fb34 0%,
       #89d5cc 25%,
