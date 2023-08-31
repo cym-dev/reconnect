@@ -215,18 +215,6 @@ footer {
   background: linear-gradient(147deg, #f7abad 0%, #89d5cc 25%, #d7a476 75%);
 }
 @media (max-width: 991.5px) {
-  .profile img {
-    position: absolute;
-    bottom: -90px;
-    left: 0;
-    right: 0;
-    margin: 0;
-  }
-  .profile .info {
-    bottom: -500px;
-    left: 0;
-    right: 0;
-  }
   .container .row {
     flex-direction: column;
   }
@@ -244,6 +232,20 @@ footer {
   }
 }
 @media only screen and (max-width: 800px) {
+  .profile-content {
+    height: 150px;
+  }
+  .profile img {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  .profile .info {
+    position: absolute;
+    top: 180%;
+    transform: translate(-50%, 50%);
+  }
   .friends {
     display: flex;
     flex-direction: column;
