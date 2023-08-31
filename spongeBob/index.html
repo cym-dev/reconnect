@@ -1,79 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpongeBob</title>
+    <link rel="website icon" type="jpg" href="./images/profile.jpg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main>
-        <div class="profile">
-            <img src="./images/profile.jpg" alt="profile">
-            <h1>SpongeBob SquarePants</h1>
-        </div>
-        <div class="container">
-            <div class="about">                
-                <h3>About SpongeBob SquarePants</h3>
-                <br>
-                <p>
-                    Dive into the colorful world of SpongeBob SquarePants! Explore
-                    Bikini Bottom, meet iconic characters, and relive memorable.
-                </p>
-                <br>
-                <h3>Qualities of SpongeBob SquarePants</h3>
-                <br>
-                <ul>
-                    <li>Fun-loving</li>
-                    <li>Hyperactive</li>
-                    <li>Clueless</li>
-                    <li>Childish</li>
-                    <li>Happy-go-lucky personality</li>
-                </ul>
+      <div class="holder">
+        <div class="profile-content">
+          <div class="profile">
+            <img src="./images/profile.jpg" alt="profile" />
+            <div class="info">
+              <h1>SpongeBob SquarePants</h1>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="about">
+            <h3>About SpongeBob SquarePants</h3>
+            <br />
+            <p>
+              Dive into the colorful world of SpongeBob SquarePants! Explore
+              Bikini Bottom, meet iconic characters, and relive memorable.
+            </p>
+            <br />
+            <h3>Qualities of SpongeBob SquarePants</h3>
+            <br />
+            <ul>
+              <li>Fun-loving</li>
+              <li>Hyperactive</li>
+              <li>Clueless</li>
+              <li>Childish</li>
+              <li>Happy-go-lucky personality</li>
+            </ul>
+          </div>
 
-        <div class="background">
-            <img width="100%" src="./images/background.jpg" alt="background" srcset="">
+          <div class="background">
+            <img
+              width="100%"
+              src="./images/background.jpg"
+              alt="background"
+              srcset=""
+            />
             <h1>This is SpongeBob with their FRIENDS!!!</h1>
+          </div>
         </div>
         <div class="friends">
-            <div class="images">
-                <img width="100%" src="./images/patrick.png" alt="background" srcset="">
-                <a
-                target="_blank"
-                href="https://en.wikipedia.org/wiki/Patrick_Star"
-                class="blog-slider__button bg-color"
-                ><h1>Patrick Star</h1></a
-              >
-                
-            </div>
-            <div class="images">
-                <img width="100%" src="./images/squid.png" alt="background" srcset="">
-                <a
-                target="_blank"
-                href="https://en.wikipedia.org/wiki/Squidward_Tentacles"
-                class="blog-slider__button bg-color"
-                >
-                <h1>Squidward Tentacles</h1>
-                </a>
-            </div>
-            <div class="images">
-                <img width="100%" src="./images/sandy.png" alt="background" srcset="">
-                <a
-                target="_blank"
-                href="https://en.wikipedia.org/wiki/Sandy_Cheeks"
-                class="blog-slider__button bg-color"
-                >
-                <h1>Sandy Cheeks</h1>
-                </a>
-            </div>
+          <h1>SpongeBob Friends</h1>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card p-0">
+                <div class="card-image">
+                  <img src="./images/patrick.png" id="pat" alt="" />
+                </div>
+                <div class="card-content d-flex flex-column align-items-center">
+                  <h4 class="pt-2">Patrick star</h4>
+                  <h5>BestFriend</h5>
 
+                  <ul class="social-icons d-flex justify-content-center">
+                    <li style="--i: 1">
+                      <a href="#">
+                        <span class="fab fa-facebook"></span>
+                      </a>
+                    </li>
+                    <li style="--i: 2">
+                      <a href="#">
+                        <span class="fab fa-twitter"></span>
+                      </a>
+                    </li>
+                    <li style="--i: 3">
+                      <a href="#">
+                        <span class="fab fa-instagram"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card p-0">
+                <div class="card-image">
+                  <img src="./images/squid.png" id="squid" alt="" />
+                </div>
+                <div class="card-content d-flex flex-column align-items-center">
+                  <h4 class="pt-2">Squidward Tentacles</h4>
+                  <h5>Friend</h5>
+
+                  <ul class="social-icons d-flex justify-content-center">
+                    <li style="--i: 1">
+                      <a href="#">
+                        <span class="fab fa-facebook"></span>
+                      </a>
+                    </li>
+                    <li style="--i: 2">
+                      <a href="#">
+                        <span class="fab fa-twitter"></span>
+                      </a>
+                    </li>
+                    <li style="--i: 3">
+                      <a href="#">
+                        <span class="fab fa-instagram"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card p-0">
+                <div class="card-image">
+                  <img src="./images/sandy.png" id="sandy" alt="" />
+                </div>
+                <div class="card-content d-flex flex-column align-items-center">
+                  <h4 class="pt-2">Sandy Cheeks</h4>
+                  <h5>Friend</h5>
+
+                  <ul class="social-icons d-flex justify-content-center">
+                    <li style="--i: 1">
+                      <a href="#">
+                        <span class="fab fa-facebook"></span>
+                      </a>
+                    </li>
+                    <li style="--i: 2">
+                      <a href="#">
+                        <span class="fab fa-twitter"></span>
+                      </a>
+                    </li>
+                    <li style="--i: 3">
+                      <a href="#">
+                        <span class="fab fa-instagram"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </main>
-    <footer>
-        All right reserved CYM
-    </footer>
-</body>
+    <footer>All right reserved CYM</footer>
+  </body>
 </html>
