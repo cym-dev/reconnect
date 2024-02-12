@@ -140,3 +140,46 @@
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
 }
+
+/* Animations */
+
+/* Top */
+[data-inViewport="slideTop"] {
+  transition: 1.5s;
+  opacity: 0;
+  transform: translateY(-4em);
+}
+[data-inViewport="slideTop"].is-inViewport {
+  opacity: 1;
+  transform: translateY(0em);
+}
+/* Right */
+[data-inViewport="slideRight"] {
+  transition: 1s;
+  opacity: 0;
+  transform: translateX(4em);
+}
+[data-inViewport="slideRight"].is-inViewport {
+  opacity: 1;
+  transform: translateY(0em);
+}
+/* Bottom */
+[data-inViewport="slideBottom"] {
+  transition: 1.5s;
+  opacity: 0;
+  transform: translateY(4em);
+}
+[data-inViewport="slideBottom"].is-inViewport {
+  opacity: 1;
+  transform: translateY(0em);
+}
+/* Left */
+[data-inViewport="slideLeft"] {
+  transition: 2s;
+  opacity: 0;
+  transform: translateX(-4em);
+}
+[data-inViewport="slideLeft"].is-inViewport {
+  opacity: 1;
+  transform: translateX(0em);
+}

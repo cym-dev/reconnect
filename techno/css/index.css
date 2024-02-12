@@ -1,14 +1,3 @@
-/*
-
-TemplateMo 583 Festava Live
-
-https://templatemo.com/tm-583-festava-live
-
-*/
-
-/*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )             
------------------------------------------*/
 :root {
   --white-color: #ffffff;
   --primary-color: #f8cb2e;
@@ -647,10 +636,10 @@ strong {
   CONTACT               
 -----------------------------------------*/
 .contact-section {
-  background-color: #9d7400;
+  background-color: var(--custom-btn-bg-hover-color);
 }
 .contact-section h2 {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 .google-map {
   border-radius: var(--border-radius-medium);
